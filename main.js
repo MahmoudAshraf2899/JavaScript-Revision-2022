@@ -707,4 +707,123 @@ console.log("🚀 ~ file: main.js:705 ~ myUniqueData after clear", myUniqueData)
 
 */
 
-/* Set vs WeakSet And Garbage Collector */
+/* Set vs WeakSet And Garbage Collector 
+
+Notes :
+***************************************
+=> Set :Can Store Any Data Values
+=> Set : Has Size Property
+=> Set : Has Keys , Values and Entries
+=> Set : Can Use ForEach
+****************************************
+=> WeakSet : Collection Of Objects Only
+=> WeakSet : Doesn't Have Size Property
+=> WeakSet : Doesn't Have clear ,keys , values and Entries
+=> WeakSet : Cannot Use ForEach
+****************************************
+
+
+let mySet = new Set([1, 1, 1, 2, 3, "A", "A"]);
+console.log("🚀 ~ file: main.js:727 ~ mySet", mySet);
+
+console.log(`Size Of My Set is ${mySet.size}`);
+
+let iterator = mySet.keys();
+console.log("🚀 ~ file: main.js:732 ~ iterator", iterator);
+
+let myWeakSet = new WeakSet([{ A: 1, B: 1, C: 1, D: 2, E: 3, F: "A", G: "A" }]);
+console.log("🚀 ~ file: main.js:735 ~ mWeakSet", myWeakSet);
+*/
+
+/* Map Data Type Vs Object
+
+Map Vs Object
+
+=>Map: Doesn't Contain Key By Default
+=>Map: Key Can Be anything [function,object,Any Primitive Data Types]
+=>Map: ordered by Insertion
+=>Map: Get Items By Size
+=>Map: Can Be Directly Iterated
+=>Map: Better Performance When We Add Or Remove Data
+
+
+=>Object:Has Default Keys
+=>Object: Key Is String Or Symbol
+=>Object: Not Ordered By Insertion Untill Now
+=>Object: Get Size Manually
+=>Object: Not Directly Iterated And Neet To Use Object.keys()
+=>Object: Low Performance When Comparing To Map
+
+
+
+
+let myObj = {};
+let myEmptyObj = Object.create(null); //This Create Object With Out ProtoType
+let myMap = new Map();
+console.log("🚀 ~ file: main.js:761 ~ myObj", myObj);
+console.log("🚀 ~ file: main.js:762 ~ myEmptyObj", myEmptyObj);
+console.log("🚀 ~ file: main.js:763 ~ myMap", myMap);
+
+let myNewObj = {
+  10: "Number",
+  "10" :"String"
+};
+console.log(myNewObj[10]); //It Will Do Override and Get => String 
+
+let myNewMap = new Map();
+myNewMap.set(10,"Number");
+myNewMap.set("10","string");
+myNewMap.set({A:1,B:2},"Object");
+console.log("🚀 ~ file: main.js:776 ~ myNewMap", myNewMap.get(10)); // Out put :Number
+console.log("🚀 ~ file: main.js:776 ~ myNewMap", myNewMap.get("10")); //Out Put : string
+ */
+
+/* Array.from Method 
+
+console.log(Array.from("Mahmoud"));
+console.log(
+  Array.from("12345", (n) => +n + +n) // Result will be (1+1) ,(2+2),(3+3),(4+4),(5+5))
+);
+
+let myArray = [1,1,1,2,3,4];
+let spreadArray =  new Set([...myArray]);
+console.log("🚀 ~ file: main.js:790 ~ spreadArray", spreadArray)
+let setArray = new Set(myArray);
+console.log("🚀 ~ file: main.js:790 ~ setArray", setArray)
+let newArray = Array.from(setArray);
+console.log("🚀 ~ file: main.js:792 ~ newArray", newArray)
+
+function testArgs (){
+  return arguments;
+}
+function af(){ //af => Array From
+    return Array.from(arguments);
+}
+let newArr =af("Nabwy","AHMED","ALI",1,2,3,); 
+console.log("🚀 ~ file: main.js:803 ~ newArr", newArr)
+
+console.log(testArgs("Mahmoud","Nabwy"));
+*/
+
+/* Array.copyWithin Method
+
+//We Use Array.copyWitin to copy element from array and paste it in the same array
+let myArray = [10, 20, 30, 40, 50, "A", "B"];
+console.log("🚀 ~ file: main.js:811 ~ myArray", myArray)
+let copiedArray = myArray.copyWithin(3);
+console.log("🚀 ~ file: main.js:813 ~ copiedArray", copiedArray)
+*/
+
+/* Array.Some Method */
+
+//USE CASES :
+// CHECK IF ELEMENT EXIST IN ARRAY
+// CHECK IF NUMBER IN RANGE
+
+let nums = [1,2,3,4,5,6,7];
+
+let check = nums.some(function (el){
+
+  return el >5;
+})
+console.log("🚀 ~ file: main.js:828 ~ check ~ check", check) //Return True 
