@@ -814,7 +814,8 @@ let copiedArray = myArray.copyWithin(3);
 console.log("🚀 ~ file: main.js:813 ~ copiedArray", copiedArray)
 */
 
-/* Array.Some Method */
+/* Array.Some Method 
+
 
 //USE CASES :
 // CHECK IF ELEMENT EXIST IN ARRAY
@@ -827,3 +828,127 @@ let check = nums.some(function (el){
   return el >5;
 })
 console.log("🚀 ~ file: main.js:828 ~ check ~ check", check) //Return True 
+*/
+
+/* Array.every Method 
+//All Elements Should have the condition to get true
+ */
+
+/* Function To Get Dublicated Number in Array 
+const array = [3, 8, 7, 5, 3, 9, 8];
+const uniqueSet = new Set(array); //{3, 8, 7, 5, 9}
+console.log("🚀 ~ file: main.js:838 ~ uniqueSet", uniqueSet)
+
+const filteredElements = array.filter((currentValue) => {
+  if (uniqueSet.has(currentValue)) {
+    uniqueSet.delete(currentValue);
+  } else {
+    return currentValue;
+  }
+});
+console.log(filteredElements);
+*/
+
+/* Concatenate Arrays By Spread Operator 
+
+let arr1 = [1, 2, 3, 4];
+let arr2 = [5, 6, 7, 8];
+
+let AllArrays = [...arr1, ...arr2];
+console.log("🚀 ~ file: main.js:858 ~ AllArrays", AllArrays);
+*/
+
+/* Copy Array By Spread Operator 
+let copiedArray = [...arr1];
+console.log("🚀 ~ file: main.js:862 ~ copiedArray", copiedArray);
+*/
+
+/* Push Inide Arrays Using Spread Operators 
+let allFriends = ["Ahmed", "Ali", "Mahmoud", "Mohamed"];
+let thisYearFriends = ["Sameh", "Kamal"];
+
+allFriends.push(...thisYearFriends);
+console.log("🚀 ~ file: main.js:869 ~ pushedArray", allFriends);
+*/
+
+/* Use Math Object With Spread Operators 
+let myNums = [10, 20, -100, 100, 1000];
+console.log(Math.max(...myNums));
+*/
+
+/* Spread Operator with objects 
+let obj = { a: 1, b: 2 };
+let obj2 = { c: 3, d: 4 };
+console.log({...obj,...obj2});
+*/
+
+/* Regular Expression
+--Email 
+-- IP
+-- Phone
+-- URL   
+*/
+
+//Convert String To Array
+// let str1  = '10 20 100 1000 5000';
+
+// str1.split('');
+// console.log("🚀 ~ file: main.js:892 ~ str1", str1);
+
+// [...str1];
+// console.log("🚀 ~ file: main.js:898 ~ str1", str1)
+
+// Array.from (str1);
+// console.log("🚀 ~ file: main.js:901 ~ str1", str1);
+
+// Object.assign([],str1);
+// console.log("🚀 ~ file: main.js:904 ~ str1", str1)
+
+/* OOP With JavaScript 
+
+//OOP is style of Code.
+//OOP Using Object To Design A Computer Object
+//Some languages Support OOP and Some not
+//Object is A Package that contains Properties and Functions
+
+//Why we use OOP ?
+//1- OOP Help us to build complex and large software Architecture in Organized Ways.
+//2- You Will be able to Hide Certain Parts Of Code in your object with Encapsulation To Prevent Mess With Code.
+//3- You Will be able to Create Reausable Objects To Use in Your Application Easily With Inheritance
+
+//--Constructor Function..
+
+class User {
+  constructor(id, userName, salary) {
+    this.id = id; //This goes to the object that i will create from this Constructor
+    this.userName = userName || ""; //If User Not Entered User Name Return ""
+    this.salary = salary > 6000 ? salary : "You're Poor"; //If salary greater than 6000 return salary else return you are poor
+    this.msg = function () {
+      return `Hello ${this.userName}`;
+    };
+  }
+  //Methods
+  writeMsg() {
+    return `Hello ${this.userName}`;
+  }
+  updateUserName(newName) {
+    this.userName = newName;
+  }
+}
+
+let userOne = new User(100, "Mahmoud", 5000);
+let userTwo = new User(101, "Hassan", 7500);
+let userThree = new User(102, "Sayed", 6000);
+
+console.log("🚀 ~ file: main.js:927 ~ userOne", userOne.id);
+
+console.log("🚀 ~ file: main.js:927 ~ userThree", userThree.salary);
+
+//--Deal With Properties And Methods
+console.log("🚀 ~ file: main.js:927 ~ userOne", userOne.msg());
+console.log("🚀 ~ file: main.js:927 ~ userTwo", userTwo.writeMsg());
+
+//- Update Properties And Built In Constructors
+userThree.updateUserName("Mohsen");
+console.log("🚀 ~ file: main.js:952 ~ userThree", userThree.userName);
+*/
