@@ -952,3 +952,43 @@ console.log("🚀 ~ file: main.js:927 ~ userTwo", userTwo.writeMsg());
 userThree.updateUserName("Mohsen");
 console.log("🚀 ~ file: main.js:952 ~ userThree", userThree.userName);
 */
+
+/* Date and Time 
+
+let currentDate = new Date();
+console.log("🚀 ~ file: main.js:959 ~ currentDate", currentDate);
+
+console.log(Date.now()); //Get Date with mSecond || 1000 Mill Second = 1 Second
+//Get Seconds Count Since 1 January 1970
+let seconds = Date.now() / 1000;
+console.log("🚀 ~ file: main.js:964 ~ seconds", seconds);
+
+let minutes = seconds / 60;
+console.log("🚀 ~ file: main.js:967 ~ minutes", minutes);
+
+let hours = minutes / 60;
+console.log("🚀 ~ file: main.js:967 ~ hours", hours);
+
+let days = hours / 24;
+console.log("🚀 ~ file: main.js:967 ~ days", days);
+
+let years = days / 365;
+console.log("🚀 ~ file: main.js:967 ~ years", years);
+*/
+/* Parse And Stringify 
+
+// JSON.parse => Convert TextData To Js Object
+// JSON.stringfy => Convert Js Object To JSON
+
+const myJsonObjectFromServer = '{"Username":"Mahmoud","age":39}';
+console.log(
+  "🚀 ~ file: main.js:984 ~ myJsonObjectFromServer",
+  typeof myJsonObjectFromServer
+); //Result : string
+
+const myJsObject = JSON.parse(myJsonObjectFromServer);
+console.log("🚀 ~ file: main.js:990 ~ myJsObject", myJsObject);
+
+const myJsonObject = JSON.stringify(myJsObject);
+console.log("🚀 ~ file: main.js:993 ~ myJsonObject", myJsonObject);
+*/
